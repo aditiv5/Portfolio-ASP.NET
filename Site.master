@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>My Interactive Portfolio</title>
+    <style type="text/css">
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #header {
+            background-color: #1a88ff;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0; /* Make the navigation bar fixed at the top */
+            z-index: 1000;
+        }
+
+        #nav ul 
+        {
+            color: #fff;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav ul li 
+        {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        #main {
+            padding: 20px;
+            margin-top: 70px; /* Adjusted for fixed header */
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        #contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .profile-photo {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="header">
+                <h1>My Interactive Portfolio</h1>
+                <div id="nav">
+                    <ul>
+                        <li><a href="Default.aspx">Home</a></li>
+                        <li><a href="About.aspx">Portfolio</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+    
